@@ -37,4 +37,8 @@ sudo cp -r X-Road /etc/x-road-repo
 
 # Central Server
 
-# Security Server
+# LXD
+sudo apt-get dist-upgrade -y
+sudo apt-get install lxd -y
+sudo apt-get update -y
+newgrp lxd
