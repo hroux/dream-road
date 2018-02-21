@@ -14,7 +14,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys \ EB9B1D8886F44E2A
 
 
 echo "Update des Repositories"
-sudo apt-get update
+sudo apt-get update -y
 
 echo "Installation Du Central Server"
-sudo apt-get install xroad-centralserver
+sudo apt-get install xroad-centralserver -y
