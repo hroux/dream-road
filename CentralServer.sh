@@ -1,9 +1,11 @@
 #!/bin/bash
+echo "LC_ALL=en_US.UTF-8" | sudo tee -- append /etc/environment
 echo "Ajout des Repositories pour X-ROAD Central Server"
-echo "#Package Central Server for X-ROAD" >> /etc/apt/sources.list
-sudo echo "deb http://x-road.eu/packages trusty main" >> /etc/apt/sources.list
-sudo echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu trusty main" >> /etc/apt/sources.list
-sudo echo "deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu trusty main" >> /etc/apt/sources.list
+
+echo "#Package Central Server for X-ROAD" | sudo tee --append /etc/apt/sources.list
+echo "deb http://x-road.eu/packages trusty main" | sudo tee --append /etc/apt/sources.list
+echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu trusty main" | sudo tee --append /etc/apt/sources.list
+echo "deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu trusty main" | sudo tee --append /etc/apt/sources.list
 
 echo "Ajout Des clès pour X-ROAD"
 curl http://x-road.eu/packages/xroad_repo.gpg | sudo apt-key add -
