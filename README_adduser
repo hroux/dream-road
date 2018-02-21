@@ -1,0 +1,6 @@
+adduser username xroad-security-officer
+adduser username xroad-registration-officer
+adduser username xroad-service-administrator
+adduser username xroad-system-administrator
+adduser username xroad-securityserver-observer
+
