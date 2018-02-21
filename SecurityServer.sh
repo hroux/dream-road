@@ -13,7 +13,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 00A6F0A3C300EE8C
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB9B1D8886F44E2A
 
 echo "Update des Repositories"
-sudo apt-get update
+sudo apt-get update -y
 
 echo "Installation Du Central Server"
-sudo apt-get install xroad-securityserver
+sudo apt-get install xroad-securityserver -y
