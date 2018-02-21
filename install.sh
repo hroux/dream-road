@@ -11,8 +11,11 @@ sudo apt-get install ansible -y
 # Nginx Nginx
 sudo apt-get install nginx -y
 sudo rm /var/www/html/index.html
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-sudo cp ./src/default /etc/nginx/sites-available/default
+#sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+sudo cp ./src/x-road-installer /etc/nginx/sites-available/ax-road-installer
+#sudo a2ensite x-road-installer
+ln -s /etc/nginx/sites-available/ax-road-installer  /etc/nginx/sites-enabled/ax-road-installer
+sudo service nginx restart
 
 # PHP 7.2
 sudo apt install software-properties-common -y
