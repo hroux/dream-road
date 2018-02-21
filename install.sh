@@ -12,9 +12,11 @@ echo "[NGINX] Installation..."
 sudo apt-get install nginx -y
 sudo rm /var/www/html/index.html
 echo "[NGINX] Backup of the configuration file"
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-echo "[NGINX] Import of out configuration file"
-sudo cp ./src/default /etc/nginx/sites-available/default
+#sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+sudo cp ./src/x-road-installer /etc/nginx/sites-available/ax-road-installer
+#sudo a2ensite x-road-installer
+ln -s /etc/nginx/sites-available/ax-road-installer  /etc/nginx/sites-enabled/ax-road-installer
+sudo service nginx restart
 echo "[NGINX] Done."
 
 echo "[PHP7.2] Installation..."
@@ -42,6 +44,12 @@ sudo mkdir /etc/x-road-repo
 sudo chmod 777 /etc/x-road-repo
 sudo git clone "https://github.com/ria-ee/X-Road"
 sudo cp -r X-Road /etc/x-road-repo
+echo "[XROAD] Build - prepare_buildhosts"
+/etc/x-road-repo/src/prepare_buildhost.sh
+echo "[XROAD] Build - update_ruby_dependencies"
+/etc/x-road-repo/src/update_ruby_dependencies.sh
+echo "[XROAD] Build - build_packages"
+/etc/x-road-repo/src/build_packages.sh
 echo "[XROAD] Done."
 
 echo "[LXD] Installation..."
