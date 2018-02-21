@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "Ajout des Repositories pour X-ROAD Security Server"
-echo "#Package Security Server for X-ROAD" >> /etc/apt/sources.list
-sudo echo "deb http://x-road.eu/packages trusty main" >> /etc/apt/sources.list
-sudo echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu trusty main" >> /etc/apt/sources.list
-sudo echo "deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu trusty main" >> /etc/apt/sources.list
+echo "#Package Security Server for X-ROAD" | sudo tee --append /etc/apt/sources.list
+echo "deb http://x-road.eu/packages trusty main" | sudo tee --append /etc/apt/sources.list
+echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu trusty main" | sudo tee --append /etc/apt/sources.list
+echo "deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu trusty main" | sudo tee --append /etc/apt/sources.list
 
 
 
