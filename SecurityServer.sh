@@ -16,4 +16,4 @@ echo "Update des Repositories"
 sudo apt-get update -y
 
 echo "Installation Du Central Server"
-sudo apt-get install xroad-securityserver -y
+sudo apt-get install xroad-securityserver -y --allow-unauthenticated
