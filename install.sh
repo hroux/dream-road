@@ -42,6 +42,12 @@ sudo mkdir /etc/x-road-repo
 sudo chmod 777 /etc/x-road-repo
 sudo git clone "https://github.com/ria-ee/X-Road"
 sudo cp -r X-Road /etc/x-road-repo
+echo "[XROAD] Build - prepare_buildhosts"
+/etc/x-road-repo/src/prepare_buildhost.sh
+echo "[XROAD] Build - update_ruby_dependencies"
+/etc/x-road-repo/src/update_ruby_dependencies.sh
+echo "[XROAD] Build - build_packages"
+/etc/x-road-repo/src/build_packages.sh
 echo "[XROAD] Done."
 
 echo "[LXD] Installation..."
