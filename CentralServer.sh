@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Ajout des Repositories pour X-ROAD"
+echo "Ajout des Repositories pour X-ROAD Central Server"
 echo "#Package for X-ROAD" >> /etc/apt/sources.list
 sudo echo "deb http://x-road.eu/packages trusty main" >> /etc/apt/sources.list
 sudo echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu trusty main" >> /etc/apt/sources.list
