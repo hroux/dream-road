@@ -1,0 +1,17 @@
+{% extends "basic.html.twig" %}
+
+{% block body %}
+<form>
+  <div class="form-group">
+    <label for="usernameXroad">Nom d'utilisateur : </label>
+    <input type="text" class="form-control" id="usernameXroad" placeholder="nom d'utilisateur">
+  </div>
+</form>
+
+<h3>Journal d'erreurs</h3>
+<div id="logsInformations">
+  {{log}}
+</div>
+
+<button class="btn btn-success">Hello {{test}} :)</button>
+{% endblock %}
