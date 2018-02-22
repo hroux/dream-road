@@ -56,5 +56,16 @@ echo "[LXD] Installation..."
 sudo apt-get dist-upgrade -y
 sudo apt-get install lxd -y
 sudo apt-get update -y
-newgrp lxd
+#newgrp lxd
 echo "[LXD] Done."
+
+echo "[User X-ROAD] Création..." 
+sudo  useradd  x-road-user
+echo "x-road-user:x-road-password" | chpasswd
+sudo usermod -a -G sudo x-road-user
+sudo echo "x-road-user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers  
+sudo echo "_www ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+sudo echo "www-data ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "[User X-ROAD] Done."
+
+

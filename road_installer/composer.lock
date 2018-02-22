@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e35aea701e4d7f334f102e8adad39e5f",
-    "content-hash": "1bf56d86202e8ce30c203c3bf71cd104",
+    "hash": "401a341d7f75bf0dc0855e9e2d87a235",
+    "content-hash": "3c8d57b615754964009a4b4a6962c2bb",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2616,16 +2616,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.69",
+            "version": "v1.0.70",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "9f73868b361692629c73929c4dc2003f8d4bcae8"
+                "reference": "1f00c05d35523dc0ac52e4a457989a069be5a7a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/9f73868b361692629c73929c4dc2003f8d4bcae8",
-                "reference": "9f73868b361692629c73929c4dc2003f8d4bcae8",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/1f00c05d35523dc0ac52e4a457989a069be5a7a4",
+                "reference": "1f00c05d35523dc0ac52e4a457989a069be5a7a4",
                 "shasum": ""
             },
             "require": {
@@ -2658,7 +2658,7 @@
                     "email": "fabien.potencier@gmail.com"
                 }
             ],
-            "time": "2018-02-19 11:25:02"
+            "time": "2018-02-22 07:00:47"
         },
         {
             "name": "symfony/form",
@@ -5449,16 +5449,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "14fa7ef58f662a8cf83508aa7df7b1002fcccf90"
+                "reference": "ba427289009de6f0fd51fb51186eeaa70ab3a33d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/14fa7ef58f662a8cf83508aa7df7b1002fcccf90",
-                "reference": "14fa7ef58f662a8cf83508aa7df7b1002fcccf90",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/ba427289009de6f0fd51fb51186eeaa70ab3a33d",
+                "reference": "ba427289009de6f0fd51fb51186eeaa70ab3a33d",
                 "shasum": ""
             },
             "require": {
@@ -5505,7 +5505,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2018-02-19 19:05:18"
+            "time": "2018-02-21 19:43:12"
         }
     ],
     "aliases": [],
