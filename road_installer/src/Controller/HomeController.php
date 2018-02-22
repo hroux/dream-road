@@ -10,6 +10,9 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class HomeController extends Controller
 {
@@ -39,5 +42,24 @@ class HomeController extends Controller
         $jsonContent = $serializer->serialize($process, 'json');
         return new JsonResponse(array('error' => 0));
         //return $this->render('home.html.twig', array("test" => "je suis un test", "log" => $process->getOutput()));
+      }
+
+      /**
+       * @Route("/form", name="form")
+       */
+    public function formAction(Request $request)
+    {
+      $form = $this->createFormBuilder()
+                   ->add('centralServerIp', TextType::class)
+                   ->add('securityServerIp', TextType::class)
+                   ->add('configurationProxyIp', TextType::class)
+                   ->add('certificationAutorityIp', TextType::class)
+                   ->add('C\'est parti !', SubmitType::class)
+                   ->getForm();
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid())
+          return $this->render('home.html.twig', array("test" => "je suis un test", "log" => "je suis process output", 'form' => $form->createView(), 'data' => $form->getData()));
+        return $this->render('home.html.twig', array("test" => "je suis un test", "log" => "je suis process output", 'form' => $form->createView()));
     }
 }
