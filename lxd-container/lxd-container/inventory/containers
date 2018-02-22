@@ -1,0 +1,8 @@
+[local]
+localhost
+
+[containers]
+cs_xroad ansible_connection=lxd
+ss_xroad ansible_connection=lxd
+cp_xroad ansible_connection=lxd
+ca_xroad ansible_connection=lxd
