@@ -29,7 +29,7 @@
           timeout: -1,
         })
         .done(function( data ) {
-          alert( "ok" );
+          window.location = "{{ path('form')}}";
         })
         .fail(function(data){
           console.log(data);

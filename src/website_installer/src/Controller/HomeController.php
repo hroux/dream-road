@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function indexAction()
     {
 	     set_time_limit (3000000);
-        $process = new Process('echo "x-road-password" | sudo -u x-road-user /etc/x-road-repo/X-Road/src/prepare_buildhost.sh');
+        $process = new Process('sudo -u x-road-user /etc/x-road-repo/ansible/hosts/lxd_MyHost.txt road_init.yml');
         $process->run();
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);

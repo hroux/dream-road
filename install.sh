@@ -42,6 +42,7 @@ sudo mkdir /etc/x-road-repo
 sudo chmod 777 /etc/x-road-repo
 sudo git clone "https://github.com/ria-ee/X-Road"
 sudo cp -r X-Road /etc/x-road-repo
+sudo cp -r ansible /etc/x-road-repo/ansible
 echo "[XROAD] Build - prepare_buildhosts"
 /etc/x-road-repo/src/prepare_buildhost.sh
 echo "[XROAD] Build - update_ruby_dependencies"
