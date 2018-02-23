@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script for Ubuntu 17.10
+#Script for Ubuntu 14.04
 
 echo "[ANSIBLE] Installation..."
 sudo apt-get update -y
@@ -12,9 +12,7 @@ echo "[NGINX] Installation..."
 sudo apt-get install nginx -y
 sudo rm /var/www/html/index.html
 echo "[NGINX] Backup of the configuration file"
-#sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 sudo cp ./src/x-road-installer /etc/nginx/sites-available/ax-road-installer
-#sudo a2ensite x-road-installer
 ln -s /etc/nginx/sites-available/ax-road-installer  /etc/nginx/sites-enabled/ax-road-installer
 sudo service nginx restart
 echo "[NGINX] Done."
@@ -53,8 +51,7 @@ echo "[XROAD] Build - build_packages"
 echo "[XROAD] Done."
 
 echo "[LXD] Installation..."
-sudo apt-get dist-upgrade -y
-sudo apt-get install lxd -y
+sudo apt install -t xenial-backports lxd lxd-client
 sudo apt-get update -y
 newgrp lxd
 echo "[LXD] Done."
