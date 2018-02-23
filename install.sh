@@ -51,9 +51,9 @@ echo "[XROAD] Build - build_packages"
 echo "[XROAD] Done."
 
 echo "[LXD] Installation..."
-sudo apt install -t xenial-backports lxd lxd-client
+sudo apt install -t xenial-backports lxd lxd-client -y
 sudo apt-get update -y
-#newgrp lxd
+newgrp lxd
 echo "[LXD] Done."
 
 echo "[User X-ROAD] Création..." 
