@@ -30,11 +30,11 @@ class HomeController extends Controller
     public function indexAction()
     {
 	     set_time_limit (3000000);
-        $process = new Process('sudo -u x-road-user /etc/x-road-repo/ansible/hosts/lxd_MyHost.txt road_init.yml');
+        $process = new Process('sudo -u x-road-user ansible-playbook -i /etc/x-road-repo/ansible/hosts/lxd_MyHost.txt road_init.yml');
         $process->run();
-        if (!$process->isSuccessful()) {
+        /*if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
-        }
+        }*/
         $encoders = array(new JsonEncoder());
         $normalizers = array(new ObjectNormalizer());
 

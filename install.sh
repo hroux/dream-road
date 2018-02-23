@@ -31,6 +31,7 @@ echo "[SF4] Installation..."
 sudo apt-get install composer -y
 sudo cp -r src/website_installer /var/www/html
 sudo composer update -d=/var/www/html/website_installer
+chmod 777 -R /var/www/html/website_installer/var
 echo "[SF4] Done."
 
 echo "[GIT] Installation..."
