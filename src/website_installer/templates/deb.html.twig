@@ -1,0 +1,43 @@
+{% extends "basic.html.twig" %}
+
+{% block body %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3">
+      <button id="go" class="btn btn-success">Installer</button>
+      <div class="loader"></div>
+    </div>
+  </div>
+  <div id="logsInformations">
+
+  </div>
+ </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script>
+    $(document).ready(function(){
+      $('.loader').hide();
+      $('#go').click(function(){
+        $('#go').hide();
+        $('.loader').show();
+        $.ajax({
+          method: "GET",
+          url: "{{ path('exec_batch') }}",
+          timeout: -1,
+        })
+        .done(function( data ) {
+          alert( "ok" );
+        })
+        .fail(function(data){
+          console.log(data);
+          $("#logsInformations").html(data.responseText);
+          $('#go').show();
+          $('.loader').hide();
+        });
+      });
+    });
+  </script>
+{% endblock %}

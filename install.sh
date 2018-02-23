@@ -29,8 +29,8 @@ echo "[PHP7.2] Done."
 
 echo "[SF4] Installation..."
 sudo apt-get install composer -y
-sudo cp -r road_installer /var/www/html
-sudo composer update -d=/var/www/html/road_installer
+sudo cp -r src/website_installer /var/www/html
+sudo composer update -d=/var/www/html/website_installer
 echo "[SF4] Done."
 
 echo "[GIT] Installation..."
