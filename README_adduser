@@ -1,0 +1,22 @@
+adduser username xroad-security-officer
+adduser username xroad-registration-officer
+adduser username xroad-service-administrator
+adduser username xroad-system-administrator
+adduser username xroad-securityserver-observer
+
+https://www.thegeekstuff.com/2010/10/expect-examples/
+
+expect "Insert admin interface TLS certificate subject name"
+send "/CN=hyks-VirtualBox"
+
+expect "Insert admin interface TLS certificate subject name alternatives"
+send "IP:172.16.4.118,DNS:hyks-VirtualBox,DNS:hyks-VirtualBox/CN=hyks-VirtualBoxInsert admin interface TLS certificate /CN=hyks-VirtualBoxInsert admin interface TLS certificate"
+
+expect "Insert TLS certificate subject name"
+send "/CN=hyks-VirtualBox"
+
+expect "Insert TLS certificate subject name alternatives"
+send "Insert TLS certificate subject name alternatives"
+
+
+
