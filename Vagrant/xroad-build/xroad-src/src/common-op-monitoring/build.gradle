@@ -1,4 +1,0 @@
-dependencies {
-    compile project(':common-util')
-    compile project(':common-verifier')
-}
